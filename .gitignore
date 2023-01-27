@@ -128,4 +128,6 @@ dist
 
 # TernJS port file
 .tern-port
+
+.vscode
 >>>>>>> 2c704ab1e344659b8012ece401801b5a3fa48973

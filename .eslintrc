@@ -1,0 +1,61 @@
+{
+  "extends": ["fbjs", "react-app", "prettier", "plugin:import/recommended"],
+  "plugins": ["react-hooks", "prettier", "spellcheck", "import"],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "moduleDirectory": ["node_modules", "src/"]
+      }
+    }
+  },
+  "rules": {
+    "quotes": [
+      "error",
+      "double"
+  ],
+    "prettier/prettier": "error",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "off",
+    "no-unused-vars": "error",
+    "import/namespace": "off",
+    "import/no-duplicates": "error",
+    "consistent-return": "off",
+    "no-restricted-imports": [
+      2,
+      {
+        "patterns": [
+          "../**/app",
+          "../**/assets",
+          "../**/services",
+          "../**/shared",
+          "../**/utils",
+          "../**/redux"
+        ]
+      }
+    ],
+    "spellcheck/spell-checker": [
+      "error",
+      {
+        "skipWords": [],
+        "identifiers": false,
+        "ignoreRequire": true,
+        "comments": false,
+        "skipIfMatch": [
+          "http://[^s]*",
+          "^[-\\w]+/[-\\w\\.]+$",
+          "(\\s|^)(pre|post)([-\\w]|[A-Z])[a-zA-Z]+(\\s|$)",
+          "(\\s|^|\\w+)\\d+(st|nd|rd|th)(\\s|[A-Z][a-zA-Z]+|$)",
+          "^[0-9a-f]{5,999}$",
+          "^#[0-9a-f]{3,6}$",
+          "^[-\\w]+/[-\\w\\.]+$",
+          "(K|k)risp",
+          "[0-9]vh",
+          "(S|s)electable"
+        ],
+        "minLength": 3,
+        "lang": "en_US"
+      }
+    ]
+  },
+  "parser": "babel-eslint"
+}

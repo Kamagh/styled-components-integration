@@ -13,7 +13,7 @@ export const Primary = Template.bind({});
 
 Primary.args = {
   primary: true,
-  label: 'Button',
+  label: 'Text',
 };
 
 /* export const Secondary = Template.bind({});
