@@ -1,5 +1,5 @@
 {
-  "extends": ["fbjs", "react-app", "prettier", "plugin:import/recommended"],
+  "extends": ["react-app", "prettier", "plugin:import/recommended"],
   "plugins": ["react-hooks", "prettier", "spellcheck", "import"],
   "settings": {
     "import/resolver": {

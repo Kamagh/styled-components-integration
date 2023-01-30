@@ -1,51 +1,53 @@
 import React from "react";
 import styled from "styled-components";
+import PropTypes from 'prop-types';
+
 import { ThemeProvider } from "styled-components";
 
-const theme = {
-  text: {
-    text_fz: 12,
-    text_lh: 16,
-    sizes: {
-      xs: {
-        text_fz: "12px",
-        text_lh: "16px",
-      },
-      sm: {
-        text_fz: "14px",
-        text_sm_lh: "20px",
-      },
-      md: {
-        text_fz: "16px",
-        text_lh: "24px",
-      },
-      lg: {
-        text_fz: "18px",
-        text_lh: "28px",
-      },
-    },
-    fws: {
-      light: {
-        fontWeight: 300,
-      },
-      regular: {
-        fontWeight: 400,
-      },
-      medium: {
-        fontWeight: 500,
-      },
-      bold: {
-        fontWeight: 700,
-      },
-    },
-  },
-};
+// const theme = {
+//   text: {
+//     text_fz: 12,
+//     text_lh: 16,
+//     sizes: {
+//       xs: {
+//         text_fz: "12px",
+//         text_lh: "16px",
+//       },
+//       sm: {
+//         text_fz: "14px",
+//         text_sm_lh: "20px",
+//       },
+//       md: {
+//         text_fz: "16px",
+//         text_lh: "24px",
+//       },
+//       lg: {
+//         text_fz: "18px",
+//         text_lh: "28px",
+//       },
+//     },
+//     fws: {
+//       light: {
+//         fontWeight: 300,
+//       },
+//       regular: {
+//         fontWeight: 400,
+//       },
+//       medium: {
+//         fontWeight: 500,
+//       },
+//       bold: {
+//         fontWeight: 700,
+//       },
+//     },
+//   },
+// };
 
-const Text = styled.p`
-  font-size: ${({ theme }) => theme.text.sizes[size].text_fz};
-  line-height: ${({ theme }) => theme.text.sizes[size].text_lh};
-  font-weight: ${({ theme }) => theme.text.fws[fw].text_ls};
-`;
+// const Text = styled.p`
+//   font-size: ${({ theme }) => theme.text.sizes[size].text_fz};
+//   line-height: ${({ theme }) => theme.text.sizes[size].text_lh};
+//   font-weight: ${({ theme }) => theme.text.fws[fw].text_ls};
+// `;
 
 Text.defaultProps = {
   font: "GT Walsheim Pro",
@@ -63,5 +65,11 @@ const Typography = () => (
   //   <Text> size='lg' fw='bold'</Text>
   // </ThemeProvider>
 );
+
+Typography.propTypes = {
+  primary: PropTypes.bool,
+
+  size: PropTypes.oneOf(['xs', 'sm', 'md', 'lg'])
+}
 
 export default Typography;
